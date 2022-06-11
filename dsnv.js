@@ -34,7 +34,7 @@ function DSNV() {
     this.TimKiemNV = function (keyword){
         var arr_Search = [];
         this.arr.forEach(function(item){
-            if(item.HoTen.toLowerCase().indexOf(keyword.toLowerCase()) > -1)
+            if(removeVietnameseTones(item.Loai).toLowerCase().indexOf(removeVietnameseTones(keyword).toLowerCase()) > -1)
             {
                 arr_Search.push(item);
             }
